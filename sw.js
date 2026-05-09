@@ -1,5 +1,5 @@
 
-const CACHE = 'pulseguard-v5-multipage';
+const CACHE = 'pulseguard-v6-tapfix';
 const ASSETS = ['./index.html','./microsite.html','./prototype.html','./manifest.json','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
