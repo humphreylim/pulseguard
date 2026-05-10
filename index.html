@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Beyond Early Warning · Mpox Capstone</title>
 
 <template id="__bundler_thumbnail" data-bg-color="#0F0E0B">
@@ -396,23 +399,7 @@
 })();
 </script>
 
-<script>
-(function(){
-  // Only intercept nav when running inside a parent iframe (e.g. design canvas preview).
-  // On standalone deploy (GitHub Pages), let the browser follow the <a href> normally.
-  if (window.parent === window) return;
-  document.addEventListener('click', function(e){
-    var a = e.target.closest && e.target.closest('a');
-    if (!a) return;
-    var href = a.getAttribute('href') || '';
-    if (href === 'index.html' || href === 'microsite.html' || href === 'prototype.html') {
-      e.preventDefault();
-      var key = href.replace('.html','');
-      window.parent.postMessage({pgNav: key}, '*');
-    }
-  }, true);
-})();
-</script>
+<!-- nav click interceptor removed; <a href> handles navigation natively -->
 
 </body>
 </html>
